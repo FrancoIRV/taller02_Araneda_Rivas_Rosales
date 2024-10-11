@@ -47,9 +47,19 @@ public class Main {
                 break;
         }
     }
-    public static void imprimirBoleta(String [] habitaciones, int [] diasReservados, int nro,double total){
+    public static void imprimirBoleta(String [] habitaciones, int [] diasReservados, int nro,double total ){
         System.out.println("la habitacion se uso:"+ diasReservados[nro-1] + "dias");
         System.out.println("el monto total es"+ calcularTotal(habitaciones,diasReservados,nro));
+    }
+
+    public static boolean conAlimentacion(String [] habitaciones,int nro){
+        Boolean estado = false;
+        if (habitaciones[nro-1].equals("OA")){
+            estado = true;
+        } else if (habitaciones[nro-1].equals("OS")) {
+            estado = false;
+        } return false;
+
 
     }
 
