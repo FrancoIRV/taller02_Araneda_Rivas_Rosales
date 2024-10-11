@@ -15,18 +15,68 @@ public class Main {
             String servicio = scanner.nextLine();
             return servicio;
         } catch (Exception e) {
-            System.out.println("Ingrese datos validos")
+            System.out.println("Ingrese datos validos");
         }
     }
 
     public static int pedirDias(Scanner) {
         try {
             System.out.println("¿Cuantos dias quiere hospedar?");
-            diasOcupados = scanner.nextint();
+            int diasOcupados = scanner.nextint();
             return diasOcupados;
         } catch (Exception e) {
             System.out.println("Ingrese datos validos");
         }
+    }
+    public static boolean validarDias(int diasOcupados){
+        boolean estado = false;
+        if diasOcupados >= 0 {
+            estado = true;
+        }
+        return estado;
+    }
+    public static validarServicio(String servicio){
+        boolean estado = false
+        switch{
+            case 1:
+                if servicio == "1"{
+                    estado = true;
+                    break;
+            }
+            case 2:
+                if servicio == "2" {
+                estado = true;
+                break;
+            }
+        }
+        return estado;
+    }
+    /* cambia el estado de la lista de disponible a reservado */
+    public static void realizarReserva(String[] listaHabitaciones, int[] listaDias, int diasOcupados){
+        for(int i = 0; i <= listaHabitaciones.length; i++){
+            if listaHabitaciones[i].equals("D"){
+                listaHabitaciones[i] = "R";
+                listaDias[i] = diasOcupados
+                break;
+            }
+            else{
+                System.out.println("No hay habitaciones disponibles");
+            }
+        }
+    }
+    public static void ocuparHabitacion(String tipoServicio, int diasOcupados, String[] listaHabitaciones, int[] listaDias){
+        for int i = 0; i<= listaHabitaciones.length; i++){
+            if listaHabitaciones[i].equals("D"){
+                listaHabitaciones[i] = tipoServicio;
+                listaDias[i] = diasOcupados;
+                break;
+            }
+            else{
+                System.out.println(" no hay habitaciones disponibles");
+            }
+        }
+
+
     }
 }
 
